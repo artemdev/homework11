@@ -1,0 +1,36 @@
+.social-icons-list {
+  width: 224px;
+  height: 56px;
+  background-color: $yellow;
+  @include box-sizing-border-box();
+  @include display-inline-flex();
+  cursor: pointer;
+  &__icon {
+    display: block;
+    fill: $pink;
+    width: 26px;
+    height: 21px;
+  }
+  
+
+  &__link {
+    width: 56px;
+    height: 56px;
+    border: 1px solid transparent;
+    border-right-color: $pink;
+    @include display-flex();
+    @include justify-content-center();
+    @include align-items-center();
+    @include box-sizing-border-box();
+    &:hover {
+      background-color: $pink;
+    }
+
+    &--without-border {
+      border-right-color: transparent;
+    }
+  }
+  &__link:hover &__icon {
+    fill: white;
+  }
+}

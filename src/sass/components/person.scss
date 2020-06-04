@@ -1,0 +1,77 @@
+.person {
+  font-family: $montserrat;
+  width: 380px;
+  @include display-inline-flex();
+  @include flex-direction-column();
+  @include flex-wrap-wrap();
+  position: relative;
+
+  &__image {
+    display: block;
+    margin-bottom: 28px;
+    position: relative;
+  }
+
+  &__hover-bg {
+    background-color: $green;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 380px;
+    height: 470px;
+  }
+  &:hover & {
+    background-color: black;
+  }
+
+  &__title {
+    display: block;
+    @include setup-font(null, 0.875rem, 500, null);
+    text-align: center;
+    text-transform: uppercase;
+    color: $light-black;
+    margin-bottom: 11px;
+  }
+
+  &__description {
+    @include setup-font(null, 0.8125rem, 300, italic);
+    text-align: center;
+    color: $grey;
+  }
+  &__image-overlay {
+    background-image: -moz-linear-gradient(
+      90deg,
+      rgba(252, 227, 138, 0.9) 0%,
+      rgba(243, 129, 129, 0.9) 100%
+    );
+    background-image: -webkit-linear-gradient(
+      90deg,
+      rgba(252, 227, 138, 0.9) 0%,
+      rgba(243, 129, 129, 0.9) 100%
+    );
+    background-image: -ms-linear-gradient(
+      90deg,
+      rgba(252, 227, 138, 0.9) 0%,
+      rgba(243, 129, 129, 0.9) 100%
+    );
+
+    visibility: hidden;
+    position: absolute;
+    @include display-flex();
+    @include justify-content-center();
+    @include align-items-center();
+    width: 380px;
+    height: 470px;
+    font-size: 0;
+  }
+
+  &:hover &__image {
+    @include hover-animation();
+    z-index: 0;
+  }
+
+  &:hover &__image-overlay {
+    @include hover-animation();
+    z-index: 10;
+  }
+}

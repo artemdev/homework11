@@ -1,0 +1,51 @@
+@import 'normalize.scss';
+@import 'base.scss';
+@import 'helpers/colors.scss';
+@import 'helpers/fonts.scss';
+@import 'helpers/mixins.scss';
+@import 'helpers/animation.scss';
+
+@import 'sections/header.scss';
+@import 'sections/wellcome.scss';
+@import 'sections/our-services.scss';
+@import 'sections/our-team.scss';
+@import 'sections/footer.scss';
+
+@import 'components/person.scss';
+@import 'components/section-heading.scss';
+@import 'components/social-icons-list.scss';
+@import 'components/subscribe-form.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+html,
+body {
+  @include setup-font($roboto, 16px, null, null);
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+}
+
+.text {
+  font-size: 0.9375rem;
+  color: $grey;
+}
+
+.break {
+  display: block;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1210px;
+  @include display-flex();
+  @include flex-direction-column();
+  @include justify-content-center();
+}

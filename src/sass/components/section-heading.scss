@@ -1,0 +1,30 @@
+.section-heading {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+  @include setup-font($montserrat, 1.875rem, 700, null);
+  margin-bottom: 101px;
+  text-transform: uppercase;
+
+  &::after {
+    position: absolute;
+    margin-top: 37px;
+    display: block;
+    width: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    height: 3px;
+    content: '';
+    background-color: $pink;
+  }
+
+  &__span {
+    @include setup-font($kaushan, 1.5rem, 700, null);
+    display: block;
+    text-transform: none;
+    margin-bottom: 17px;
+  }
+}

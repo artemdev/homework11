@@ -1,0 +1,64 @@
+// retina bg
+@media (-webkit-min-device-pixel-ratio: 2),
+  (-o-min-device-pixel-ratio: 2/1),
+  (min-resolution: 192dpi) {
+  .wellcome {
+    background: -webkit-linear-gradient(
+        90deg,
+        rgba(252, 227, 138, 0.9),
+        rgba(243, 129, 129, 0.9)
+      ),
+      url('../images/bg/bg@2x.jpg') no-repeat center center;
+    background-size: cover;
+  }
+}
+
+.wellcome {
+  background: -webkit-linear-gradient(
+      90deg,
+      rgba(252, 227, 138, 0.9),
+      rgba(243, 129, 129, 0.9)
+    ),
+    url('../images/bg/bg.jpg') no-repeat center center;
+  background-size: cover;
+  padding-top: 210px;
+  padding-bottom: 232px;
+  margin-bottom: 41px;
+  &__header {
+    font-size: 9.375rem;
+    text-transform: uppercase;
+    margin-bottom: 117px !important;
+    line-height: 132px;
+  }
+
+  &__span {
+    @include setup-font($kaushan, 4.5rem, null, null);
+    text-transform: none;
+    margin-bottom: 32px;
+    line-height: 106px;
+  }
+  &__btn {
+    @include box-sizing-border-box();
+    border: 2px solid white;
+    width: 156px;
+    height: 40px;
+    line-height: 40px;
+
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &__span,
+  &__header {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+  }
+}
+.wellcome,
+.our-services__title {
+  @include setup-font($montserrat, null, 700, null);
+}

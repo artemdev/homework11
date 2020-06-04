@@ -1,0 +1,21 @@
+.footer {
+  @include display-inline-flex();
+  @include justify-content-space-between();
+  @include align-items-center();
+  border-top: 1px solid #e5e5e5;
+  font-size: 0.875rem;
+  height: 60px;
+
+  &__copyright {
+    @include display-flex();
+    @include setup-font($montserrat, null, 400, null);
+  }
+  &__form {
+    @include display-inline-flex();
+    @include justify-content-flex-end();
+    @include setup-font(null, 0, null, null);
+  }
+  & .link {
+    color: $pink;
+  }
+}

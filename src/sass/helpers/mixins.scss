@@ -1,0 +1,99 @@
+//mixins
+@mixin hover-animation() {
+  -webkit-animation: HoverAnimation 200ms linear;
+  animation: HoverAnimation 200ms linear;
+  -webkit-transition-duration: 200ms;
+  -o-transition-duration: 200ms;
+  transition-duration: 200ms;
+  -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
+  -webkit-transform: translate(-10px, -10px);
+  -ms-transform: translate(-10px, -10px);
+  transform: translate(-10px, -10px);
+  visibility: visible;
+}
+
+@mixin display-flex() {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin display-inline-flex {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+@mixin justify-content-flex-end() {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+@mixin justify-content-space-between() {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+@mixin justify-content-center() {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@mixin align-items-center() {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@mixin align-items-stretch {
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+@mixin flex-direction-row() {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+@mixin flex-direction-column() {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@mixin flex-wrap-wrap() {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@mixin box-sizing-border-box() {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin box-sizing-content-box() {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+// @mixin flex- {
+
+// }
+
+@mixin setup-font(
+  $font-family: null,
+  $font-size: null,
+  $font-weight: null,
+  $font-style: null
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  font-style: $font-style;
+}

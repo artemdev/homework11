@@ -1,0 +1,39 @@
+.subscribe-form {
+  font-family: $montserrat;
+  &__btn {
+    background-color: $green;
+    color: white;
+    height: 40px;
+    width: 150px;
+    @include setup-font(null, 0.875rem, 700, null);
+    text-transform: uppercase;
+    border: 0px;
+  }
+  &__text-input {
+    @include box-sizing-content-box();
+    width: 230px;
+    padding-left: 13px;
+    @include setup-font($roboto, 0.875rem, 300, italic);
+    border: 1px solid $input-border;
+  }
+
+  &__text-input::-webkit-input-placeholder {
+    color: $placeholder;
+  }
+  &__text-input::-moz-placeholder {
+    color: $placeholder;
+  }
+  &__text-input:-ms-input-placeholder {
+    color: $placeholder;
+  }
+  &__text-input::-ms-input-placeholder {
+    color: $placeholder;
+  }
+  &__text-input::placeholder {
+    color: $placeholder;
+  }
+
+  &__text-input:focus {
+    outline-width: 0;
+  }
+}
