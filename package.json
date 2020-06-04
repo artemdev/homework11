@@ -12,7 +12,7 @@
   "homepage": "https://github.com/artemdev/homework11",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/artemdev/homework11.git"
+    "url": "git+https://github.com/luxplanjay/gulp-starter-kit.git"
   },
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "MIT",
