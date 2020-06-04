@@ -3,13 +3,16 @@
   position: absolute;
   @include display-inline-flex();
   @include flex-direction-row();
-  @include justify-content-space-between();
-  @include align-items-stretch();
+  justify-content: space-between;
   margin: auto;
   left: 0;
   right: 0;
   width: 1210px;
   height: 50px;
+  &__wrap {
+    display: flex;
+    justify-content: flex-end;
+  }
   &__logo {
     @include setup-font(null, 1.875rem, 600, normal);
     line-height: 30px;
@@ -20,18 +23,9 @@
   &__menu {
     @include display-inline-flex();
     @include justify-content-flex-end();
+
     width: 622px;
     height: 50px;
-  }
-
-  &__icon {
-    width: 21px;
-    height: 18px;
-  }
-  &__icon-container {
-    display: inline-block;
-    width: 45px;
-    text-align: right;
   }
 
   &__item .link {
@@ -51,13 +45,7 @@
     text-decoration: none;
     text-transform: uppercase;
     padding-top: 36px;
-    width: 104px;
-  }
-
-  &__icons-list {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    width: 90px;
   }
 
   &__item:hover .link:before {
@@ -68,5 +56,19 @@
     height: 3px;
     content: '';
     background-color: $yellow;
+  }
+  &__icons-list {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__icons-link {
+    display: inline-block;
+    width: 45px;
+    text-align: right;
+  }
+  &__icon {
+    width: 21px;
+    height: 18px;
   }
 }
